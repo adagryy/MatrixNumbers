@@ -3,7 +3,7 @@
 #include "functions.h"
 
 int main(){
-	printf("Działa!\n");
+	printf("Działam dobrze!\n");
 	printf("Liczba: %d\n", getfavoritenumber());
 	return 0;
 }
