@@ -1,7 +1,7 @@
 CC=cc
 CFLAGS=-c
 LDFLAGS=
-SOURCES=functions.c matrix.c
+SOURCES=functions.c matrix.c refresh.c
 OBJECTS=$(SOURCES:.c=.o)
 EXECUTABLE=matrix
 
