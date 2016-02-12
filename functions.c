@@ -30,8 +30,6 @@ char** allocate_matrix_table(int n, int m){
 	return tab;
 }
 
-
-
 int generate_random_character(){
 	//(48,57)
 	//(65,90)
@@ -71,9 +69,6 @@ void free_tab(char **tab, int n){
 	for(i = 0; i < n; i++){
 		free(tab[i]);
 	}
-	// free(start_fall);
-	// free(end_fall);
-	// free(last_printed);
 	free(array);
 	free(tab);
 }

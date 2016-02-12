@@ -12,9 +12,8 @@ int main(){
 
 	randomise(80);
 
-	for(i = 0; i < 50; i++){
+	for(i = 0; i < 20000; i++){
 		refresh_tab(tab, 80, 24);
-		 
 	}
 
 	free_tab(tab, 80);

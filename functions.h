@@ -3,11 +3,12 @@
 
 typedef struct data{
 	int s1, s2;
-	int l1, l2;
+	int e1, e2;
 	int t1, t2;
 	int reset1, reset2;
 	int white;
 	int counter1;
+	int deleted1;
 }data;
  
 data* array;
