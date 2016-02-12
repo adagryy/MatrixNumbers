@@ -54,6 +54,19 @@ void start_removing(char **tab, int n, int m){
 	}
 }
 
+void randomise_new_character(char** tab, int n, int m){
+	int i, j, random_number;
+
+	for(i = 0; i < n; i++){
+		for(j = 0; j < m; j++){
+			random_number = rand() % 3;
+			if(random_number == 1 && tab[i][j] != 32){
+				tab[i][j] = generate_random_character();
+			}
+		}
+	}
+}
+
 void refresh_tab(char** tab, int n, int m){
 	int i;
 	int temp1, temp2, temp3, temp4;
@@ -88,6 +101,7 @@ void refresh_tab(char** tab, int n, int m){
 	}
 	
 	usleep(100000);
+	randomise_new_character(tab, n, m);
 	print_tab(tab, n, m);
 	start_removing(tab,n,m);
 }
