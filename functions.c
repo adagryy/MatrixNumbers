@@ -50,15 +50,17 @@ void print_tab(char** tab, int n, int m){
 	int i, j;
 	char** temp = tab;
 	for(i = 0; i < m; i++){
-		for(j = 0; j < n; j++){
-			// if(i == last_printed[j])
-			// 	printf(KWHT);
-			// else
+		for(j = 0; j < n; j++){			
+			if(i == array[j].white){
+				printf(KWHT);
+				printf( "%c", tab[j][i]);
+				printf(RESET);
+			}
+			else{
 				printf(KGRN);
-
-			printf( "%c", tab[j][i] );
-			printf(RESET);
-			//printf("%c", tab[j][i]);
+				printf( "%c", tab[j][i]);
+				printf(RESET);
+			}			
 		}	
 		printf("\n");
 	}

@@ -14,30 +14,30 @@ void randomise(int n){
 		array[i].reset2 = rand() % 25;
 		array[i].t1 = 0;
 		array[i].t2 = 0;
+		array[i].white = -1;
+		array[i].counter1 = 0;
 	}
 }
 
 void refresh_tab(char** tab, int n, int m){
-	int i,j;
+	int i;
+	int temp1, temp2;
 
 	for(i = 0; i < n; i++){
-		for(j = 0; j < m; j++){
-			if(array[i].s1 >= j && j <= array[i].s1 + array[i].l1){
-				tab[i][j] = generate_random_character();
-			
-			// if(array[i].s2 >= j && i <= array[i].s2 + array[i].l2)
-			// 	tab[i][j] = generate_random_character();
-			usleep(100000);
-			print_tab(tab, n, m);
-		}
-		}
+		temp1 = array[i].s1 + array[i].counter1;
+		temp2 = array[i].s1 + array[i].l1;
+
+		
+		if(temp1 == temp2)
+			array[i].white = -1;
+		else
+			array[i].white = temp1;
+		
+		tab[i][temp1] = generate_random_character();
+		if(temp1 < temp2)
+			array[i].counter1++;
 	}
 
+	usleep(100000);
+	print_tab(tab, n, m);
 }
-
-// typedef struct data{
-// 	int s1, s2;
-// 	int l1, l2;
-// 	int t1, t2;
-// 	int reset1, reset2;
-// }data

@@ -12,7 +12,7 @@ int main(){
 
 	randomise(80);
 
-	for(i = 0; i < 60; i++){
+	for(i = 0; i < 50; i++){
 		refresh_tab(tab, 80, 24);
 		 
 	}
