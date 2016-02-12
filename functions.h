@@ -6,9 +6,9 @@ typedef struct data{
 	int e1, e2;
 	int t1, t2;
 	int reset1, reset2;
-	int white;
-	int counter1;
-	int deleted1;
+	int white1, white2;
+	int counter1, counter2;
+	int deleted1, deleted2;
 }data;
  
 data* array;

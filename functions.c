@@ -46,10 +46,11 @@ int generate_random_character(){
 void print_tab(char** tab, int n, int m){
 	system("clear");
 	int i, j;
+	//
 	char** temp = tab;
 	for(i = 0; i < m; i++){
 		for(j = 0; j < n; j++){			
-			if(i == array[j].white){
+			if(i == array[j].white1 || i == array[j].white2){
 				printf(KWHT);
 				printf( "%c", tab[j][i]);
 				printf(RESET);
